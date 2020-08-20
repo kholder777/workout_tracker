@@ -15,6 +15,9 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+//TODO: install html routes.
+
+// TODO: modify code below for api routes.
 //connects to workout db/ deployment process.
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
 	useNewUrlParser: true,
