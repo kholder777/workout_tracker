@@ -4,12 +4,11 @@ const Schema = mongoose.Schema;
 
 //schema: exercises fields
 const ExerciseSchema = new Schema({
-	type: { type: String, trim: true },
-	name: { type: String, trim: true },
-	duration: { type: Number, trim: true },
-	weight: { type: Number, trim: true },
-	reps: { type: Number, trim: true },
-	sets: { type: Number, trim: true },
+	day: {
+		type: Date,
+		default: new Date().setDate(new Date().getDate()),
+	},
+	exercises: Array,
 });
 
 const Exercise = mongoose.model("Exercise", ExerciseSchema);
